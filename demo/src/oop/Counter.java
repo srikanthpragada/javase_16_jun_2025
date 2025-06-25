@@ -2,7 +2,16 @@ package oop;
 
 public class Counter {
     // instance variables
-	private int value;
+	private int value, start;
+	
+	public Counter(int v) {
+		value = start = v;
+	}
+	
+	public Counter() {
+		value = 0;
+		start = 0;
+	}
 	
 	// methods 
 	public void inc() {
@@ -22,6 +31,6 @@ public class Counter {
 	}
 	
 	public void reset() {
-		value = 0;
+		value = start;
 	}
 }

@@ -5,21 +5,20 @@ public class TestCounter {
 	public static void main(String[] args) {
 		Counter c; // object reference
 
-		c = new Counter(); // Object
+		c = new Counter(100); // Object
 
 		// Call methods 
 		c.inc();
 		c.inc(5);
-
 		System.out.println(c.getValue());
-		//System.out.println(c.value);
 		
-		Counter c2 = new Counter();
+		c.reset();
+		System.out.println(c.getValue());
+
+		
+		Counter c2 = new Counter();   // starts with 0
 		System.out.println(c2.getValue());
 		
-		// println is overloaded 
-		System.out.println("Abc");
-		System.out.println(10.50);
 	}
 
 }
