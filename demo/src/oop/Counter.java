@@ -9,8 +9,8 @@ public class Counter {
 	}
 	
 	public Counter() {
-		value = 0;
-		start = 0;
+		// call another constructor
+		this(0);
 	}
 	
 	// methods 

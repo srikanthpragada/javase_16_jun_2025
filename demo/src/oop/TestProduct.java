@@ -37,6 +37,11 @@ class Product {
 	public void setName(String n) {
 		this.name = n;
 	}
+	
+	public static int getTaxRate() {
+		//price
+		return  Product.taxRate;
+	}
 }
 
 public class TestProduct {
@@ -44,6 +49,8 @@ public class TestProduct {
 	public static void main(String[] args) {
 		Product p1 = new Product("iPhone 16 Pro", 90000);
 		System.out.println(p1.getNetPrice());
+		
+		System.out.println(Product.getTaxRate());
 
 	}
 
