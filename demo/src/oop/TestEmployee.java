@@ -49,17 +49,39 @@ class Consultant extends Employee {
 	public int getPay() {
 		return this.hours * this.rate;
 	}
+}
 
+class SalariedEmployee extends Employee {
+	protected int salary;
+
+	public SalariedEmployee(String name, String email, int salary) {
+		super(name, email);
+		this.salary = salary;
+	}
+
+	@Override
+	public void print() {
+		super.print();
+		System.out.println(this.salary);
+	}
+
+	public int getSalary() {
+		return this.salary;
+	}
+
+	public int getPay() {
+		return this.salary;
+	}
 }
 
 public class TestEmployee {
 
 	public static void main(String[] args) {
-		var c = new Consultant("Scott", "scott@gmail.com", 10, 1000);
-
-		System.out.println(c.getName());
-		System.out.println(c.getPay());
-
+		Employee e = new Consultant("Scott", "scott@gmail.com", 10, 1000);
+		e.print(); // Runtime Polymorphism 
+		
+	    e = new SalariedEmployee("Mark", "mark@microsoft.com", 300000);
+	    e.print();
 	}
 
 }
