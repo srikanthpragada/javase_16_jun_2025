@@ -1,6 +1,6 @@
 package oop;
 
-class Employee {
+abstract class Employee {
 	protected String name, email;
 
 	public Employee(String name, String email) {
@@ -17,9 +17,11 @@ class Employee {
 	}
 
 	public void print() {
-		System.out.println(this.name);
+		System.out.println(this.name); // compile-time polymorphism 
 		System.out.println(this.email);
 	}
+	
+	public abstract int getPay();  
 }
 
 class Consultant extends Employee {
@@ -46,6 +48,7 @@ class Consultant extends Employee {
 		return rate;
 	}
 
+	@Override 
 	public int getPay() {
 		return this.hours * this.rate;
 	}
@@ -69,6 +72,7 @@ class SalariedEmployee extends Employee {
 		return this.salary;
 	}
 
+	@Override 
 	public int getPay() {
 		return this.salary;
 	}
@@ -79,9 +83,13 @@ public class TestEmployee {
 	public static void main(String[] args) {
 		Employee e = new Consultant("Scott", "scott@gmail.com", 10, 1000);
 		e.print(); // Runtime Polymorphism 
+		System.out.println(e.getPay()); // Runtime Polymorphism 
+		
 		
 	    e = new SalariedEmployee("Mark", "mark@microsoft.com", 300000);
 	    e.print();
+	    System.out.println(e.getPay());
+	    
 	}
 
 }
