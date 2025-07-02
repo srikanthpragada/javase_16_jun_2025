@@ -20,6 +20,11 @@ class Point {
 		else
 			return false;
 	}
+	
+	@Override 
+	public int hashCode() {
+		return  1; 
+	}
 }
 
 public class TestPoint {
@@ -32,6 +37,9 @@ public class TestPoint {
 		System.out.println(p1.toString());
 		System.out.println(p1.equals(p2));
 		System.out.println(p1.equals("Abc"));
+		
+		System.out.println(p1.hashCode());
+		System.out.println(p2.hashCode());
 	}
 
 }
