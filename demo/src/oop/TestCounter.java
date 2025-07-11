@@ -19,6 +19,14 @@ public class TestCounter {
 		Counter c2 = new Counter();   // starts with 0
 		System.out.println(c2.getValue());
 		
+		try {
+			c2.dec();
+		} catch (InvalidCounterException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
 	}
 
 }
