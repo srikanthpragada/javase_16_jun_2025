@@ -9,7 +9,6 @@ class ChildThread extends Thread {
 }
 
 public class ChildThreadDemo {
-
 	public static void main(String[] args) throws InterruptedException {
         System.out.println("In Main Thread!");
         ChildThread ct = new ChildThread();
