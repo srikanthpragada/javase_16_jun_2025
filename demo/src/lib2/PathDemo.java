@@ -4,7 +4,6 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 
 public class PathDemo {
-
 	public static void main(String[] args) {
 		 var p = Path.of("c:\\classroom\\java");
 		 
