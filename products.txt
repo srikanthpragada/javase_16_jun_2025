@@ -1,0 +1,4 @@
+Logitech Mouse,10000
+External HDD,15000
+Samsung Monitor,20000
+Logitech Keyboard,5000
