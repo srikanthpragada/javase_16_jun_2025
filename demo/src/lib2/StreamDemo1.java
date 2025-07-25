@@ -1,7 +1,7 @@
 package lib2;
 
 import java.util.Arrays;
-
+ 	
 public class StreamDemo1 {
 
 	public static void main(String[] args) {
@@ -9,7 +9,8 @@ public class StreamDemo1 {
 		 
 		 Arrays.stream(nums)
 		       .filter(n -> n % 2 == 0)   // intermediate
-		       .sorted()   // intermediate
+		       .sorted()  				 // intermediate
+		       .limit(3)
 		       //.forEach( obj -> System.out.println(obj));  // term
 		       .forEach(System.out::println);  // terminal
 
